@@ -14,3 +14,9 @@
 ## Demo:
 - The following figure shows the demo of the application with circle drawing and filling performed:<br>
 ![Screenshot](./ss.png)
+
+## Test:
+- You can test and use the application(bound to linux (Qt-based) users) by downloading from the releases section.
+
+## Contibuting:
+- Contributions for implementing any other algorithms/ optimizing the existing ones are very much welcome and would be greatly appreciated!
