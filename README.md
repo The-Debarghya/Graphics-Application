@@ -11,4 +11,6 @@
 - `Transformation Algorithms`: Shift, Scale, Shear, Rotate, etc.
 - `Clipping`: Line and Polygon clipping algorithms.
 
+## Demo:
+- The following figure shows the demo of the application with circle drawing and filling performed:<br>
 ![Screenshot](./ss.png)
