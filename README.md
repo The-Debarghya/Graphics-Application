@@ -11,4 +11,4 @@
 - `Transformation Algorithms`: Shift, Scale, Shear, Rotate, etc.
 - `Clipping`: Line and Polygon clipping algorithms.
 
-![Screenshot](./assets/ss.png)
+![Screenshot](./ss.png)
