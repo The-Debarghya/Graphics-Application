@@ -151,7 +151,7 @@ void MainWindow::on_spinBox_valueChanged(int arg1){
     if(ui->show_axes->isChecked()){
         on_show_axes_clicked();
     }
-    std::cout << arg1 <<"\n";
+    //std::cout << arg1 <<"\n";
 }
 
 void MainWindow::drawDDALine (int r, int g, int b){
