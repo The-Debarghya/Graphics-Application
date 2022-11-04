@@ -17,6 +17,7 @@
 
 ## Test:
 - You can test and use the application(bound to linux (Qt-based) users) by downloading from the releases section.
+- OR, if you have qmake/qt installed you can build by configuring the `Graphics-Application.pro` file.
 
 ## Contibuting:
 - Contributions for implementing any other algorithms/ optimizing the existing ones are very much welcome and would be greatly appreciated!
