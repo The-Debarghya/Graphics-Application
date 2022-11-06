@@ -94,6 +94,12 @@ private slots:
 
     void on_polygonClip_clicked();
 
+    void on_setControlPoint_clicked();
+
+    void on_clearControlPoint_clicked();
+
+    void on_drawBezierCurve_clicked();
+
 private:
     Ui::MainWindow *ui;
     QPoint p1,p2,cp1,cp2;
