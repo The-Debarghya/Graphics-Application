@@ -10,10 +10,12 @@
 - `Filling Algorithms`: Scan-line Fill, Flood Fill, Boundary Fill algorithms.
 - `Transformation Algorithms`: Shift, Scale, Shear, Rotate, etc.
 - `Clipping`: Line and Polygon clipping algorithms.
+- `Bezier Curve`: Bezier Curve of 3rd order implementation with control points.
 
 ## Demo:
 - The following figure shows the demo of the application with circle drawing and filling performed:<br>
 ![Screenshot](./ss.png)
+![Screenshot](./ss2.png)
 
 ## Test:
 - You can test and use the application(bound to linux (Qt-based) users) by downloading from the releases section.
