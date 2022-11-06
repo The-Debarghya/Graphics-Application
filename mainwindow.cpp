@@ -15,6 +15,7 @@ using namespace std::chrono;
 QImage img=QImage(700,700,QImage::Format_RGB888);
 
 std::vector<std::pair<int, int>> vertex_list;
+std::vector<std::pair<int, int>> control_pts;
 std::vector<std::pair<std::pair<int, int>, std::pair<int, int>>> lines;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -1209,3 +1210,34 @@ void MainWindow::on_polygonClip_clicked(){
     suthHodgClip();
 }
 
+void MainWindow::on_setControlPoint_clicked(){
+    int k=gs;
+    int x=((ui->frame->x)/k)*k+k/2;
+    int y=((ui->frame->y)/k)*k+k/2;
+    control_pts.push_back(std::make_pair(x,y));
+    int i=control_pts.size();
+    if(control_pts.size()>1){
+        storeEdgeInTable(control_pts[i-2].first, control_pts[i-2].second, control_pts[i-1].first, control_pts[i-1].second);//storage of edges in edge table.
+        p1.setX(control_pts[control_pts.size()-1].first);
+        p2.setX(control_pts[control_pts.size()-2].first);
+        p1.setY(control_pts[control_pts.size()-1].second);
+        p2.setY(control_pts[control_pts.size()-2].second);
+        drawDDALine(0,120,120);
+    }
+}
+
+
+void MainWindow::on_clearControlPoint_clicked(){
+    control_pts.clear();
+}
+
+
+void MainWindow::on_drawBezierCurve_clicked(){
+    double xu = 0.0 , yu = 0.0 , u = 0.0;
+    for(u = 0.0 ; u <= 1.0 ; u += 0.0001){
+        xu = pow(1-u,3)*control_pts[0].first+3*u*pow(1-u,2)*control_pts[1].first+3*pow(u,2)*(1-u)*control_pts[2].first+pow(u,3)*control_pts[3].first;
+        yu = pow(1-u,3)*control_pts[0].second+3*u*pow(1-u,2)*control_pts[1].second+3*pow(u,2)*(1-u)*control_pts[2].second+pow(u,3)*control_pts[3].second;
+        point((int)xu,(int)yu,255,0,0);
+        delay(1);
+    }
+}
