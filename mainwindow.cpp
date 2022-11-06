@@ -1083,7 +1083,7 @@ void MainWindow::on_lineClip_clicked(){
     lines.clear();
 }
 
-// Returns x-value of point of intersectipn of two
+// Returns x-value of point of intersection of two
 // lines
 int MainWindow::x_intersect(int x1, int y1, int x2, int y2,int x3, int y3, int x4, int y4){
     y1=ui->frame->height()-y1+1;
@@ -1096,7 +1096,7 @@ int MainWindow::x_intersect(int x1, int y1, int x2, int y2,int x3, int y3, int x
     return retx;
 }
 
-// Returns y-value of point of intersectipn of
+// Returns y-value of point of intersection of
 // two lines
 int MainWindow::y_intersect(int x1, int y1, int x2, int y2,int x3, int y3, int x4, int y4){
     y1=ui->frame->height()-y1+1;
