@@ -15,6 +15,7 @@
 ## Demo:
 - The following figure shows the demo of the application with circle drawing and filling performed:<br>
 ![Screenshot](./ss.png)
+- The following figure shows the demo of the application with bezier curve:<br>
 ![Screenshot](./ss2.png)
 
 ## Test:
