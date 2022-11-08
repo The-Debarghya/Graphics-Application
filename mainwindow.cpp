@@ -1113,6 +1113,7 @@ int MainWindow::y_intersect(int x1, int y1, int x2, int y2,int x3, int y3, int x
 // This functions clips all the edges w.r.t one clip
 // edge of clipping area
 void MainWindow::clip(int x1, int y1, int x2, int y2){
+    if (vertex_list.size() == 0) return;
     int poly_size=vertex_list.size()-1;
     int new_poly_size = 0;
 
@@ -1233,6 +1234,7 @@ void MainWindow::on_clearControlPoint_clicked(){
 
 
 void MainWindow::on_drawBezierCurve_clicked(){
+    if (control_pts.size() == 0) return;
     double xu = 0.0 , yu = 0.0 , u = 0.0;
     for(u = 0.0 ; u <= 1.0 ; u += 0.0001){
         xu = pow(1-u,3)*control_pts[0].first+3*u*pow(1-u,2)*control_pts[1].first+3*pow(u,2)*(1-u)*control_pts[2].first+pow(u,3)*control_pts[3].first;
